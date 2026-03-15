@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoRide Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="sidebar">
+      <h2 class="logo">GoRide</h2>
+      <a href="index.html">Dashboard</a>
+      <a href="book.html">Book Ride</a>
+      <a href="history.html">Ride History</a>
+      <a href="profile.html">Profile</a>
+    </div>
+
+    <div class="main">
+
+      <h1>Welcome Back, Sanjay 👋</h1>
+
+      <div class="stats">
+        <div class="card">
+          <h3>Total Rides</h3>
+          <p>48</p>
+        </div>
+        <div class="card">
+          <h3>Completed</h3>
+          <p>44</p>
+        </div>
+        <div class="card">
+          <h3>Upcoming</h3>
+          <p>1</p>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a href="book.html" class="btn">Book a Ride</a>
+        <a href="history.html" class="btn secondary">View History</a>
+      </div>
+
+      <h2 class="section-title">Recent Rides</h2>
+
+      <div class="ride-list">
+        <div class="ride-card">
+          <p><b>Pickup:</b> Bus Stand</p>
+          <p><b>Drop:</b> Railway Station</p>
+          <p class="status completed">Completed</p>
+        </div>
+        <div class="ride-card">
+          <p><b>Pickup:</b> College</p>
+          <p><b>Drop:</b> Super Market</p>
+          <p class="status cancelled">Cancelled</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="js/app.js"></script>
+
+</body>
+</html>
