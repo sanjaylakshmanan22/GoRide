@@ -4,67 +4,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GoRide Dashboard</title>
+  <title>GoRide - Login</title>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+
+    body {
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .login-box {
+      background: white;
+      border-radius: 12px;
+      border: #7e7e7e 1px solid;
+      padding: 40px 36px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-box h2 {
+      text-align: center;
+      font-size: 26px;
+      color: #111;
+    }
+
+    .login-box p {
+      text-align: center;
+      font-size: 12px;
+      color: #888;
+      margin-bottom: 28px;
+    }
+
+    .login-box label {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      color: #444;
+      margin-bottom: 6px;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-family: Poppins;
+      font-size: 14px;
+      margin-bottom: 18px;
+      outline: none;
+    }
+
+    .login-box input:focus {
+      border-color: #FFD400;
+    }
+
+    .role-select {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 24px;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 12px;
+      background: #FFD400;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      color: #111;
+    }
+
+    .login-box button:hover {
+      opacity: 0.8;
+    }
+
+  </style>
 </head>
 
 <body>
 
-  <div class="container">
+  <div class="login-box">
 
-    <div class="sidebar">
-      <h2 class="logo">GoRide</h2>
-      <a href="index.html">Dashboard</a>
-      <a href="book.html">Book Ride</a>
-      <a href="history.html">Ride History</a>
-      <a href="profile.html">Profile</a>
-    </div>
+    <h2>GoRide</h2>
+    <p>Login to continue</p>
 
-    <div class="main">
+    <label>Email</label>
+    <input type="email" placeholder="Enter your email">
 
-      <h1>Welcome Back, Sanjay 👋</h1>
+    <label>Password</label>
+    <input type="password" placeholder="Enter your password">
 
-      <div class="stats">
-        <div class="card">
-          <h3>Total Rides</h3>
-          <p>48</p>
-        </div>
-        <div class="card">
-          <h3>Completed</h3>
-          <p>44</p>
-        </div>
-        <div class="card">
-          <h3>Upcoming</h3>
-          <p>1</p>
-        </div>
-      </div>
+    <label>Login As</label>
+    <select class="role-select" id="roleSelect">
+      <option value="user">User</option>
+      <option value="driver">Driver</option>
+    </select>
 
-      <div class="actions">
-        <a href="book.html" class="btn">Book a Ride</a>
-        <a href="history.html" class="btn secondary">View History</a>
-      </div>
-
-      <h2 class="section-title">Recent Rides</h2>
-
-      <div class="ride-list">
-        <div class="ride-card">
-          <p><b>Pickup:</b> Bus Stand</p>
-          <p><b>Drop:</b> Railway Station</p>
-          <p class="status completed">Completed</p>
-        </div>
-        <div class="ride-card">
-          <p><b>Pickup:</b> College</p>
-          <p><b>Drop:</b> Super Market</p>
-          <p class="status cancelled">Cancelled</p>
-        </div>
-      </div>
-
-    </div>
+    <button onclick="
+      let role = document.getElementById('roleSelect').value;
+      if(role === 'user'){
+        window.location.href = 'dashboard.html';
+      }else{
+        window.location.href = 'driver.html';
+      }">Login</button>
 
   </div>
-
-  <script src="js/app.js"></script>
 
 </body>
 </html>
