@@ -66,6 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem(collectionName, JSON.stringify(accounts));
 
     alert("Registration successful! You can now login.");
-    window.location.href = "login.html";
+    window.location.href = "index.html";
   });
 });

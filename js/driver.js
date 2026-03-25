@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const currentUser = JSON.parse(localStorage.getItem("currentUser_driver"));
   if (!currentUser || currentUser.role !== "driver") {
-    window.location.href = "login.html";
+    window.location.href = "index.html";
     return;
   }
 
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     logoutBtn.addEventListener("click", (e) => {
       e.preventDefault();
       localStorage.removeItem("currentUser_driver");
-      window.location.href = "login.html";
+      window.location.href = "index.html";
     });
   }
 
