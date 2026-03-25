@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-box {
+  background: white;
+  border-radius: 12px;
+  border: #7e7e7e 1px solid;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-box h2 {
+  text-align: center;
+  font-size: 26px;
+  color: #111;
+}
+
+.login-box p {
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 28px;
+}
+
+.login-box label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  margin-bottom: 18px;
+  outline: none;
+}
+
+.login-box input:focus {
+  border-color: #FFD400;
+}
+
+.role-select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  font-family: inherit;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: #FFD400;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #111;
+  transition: opacity 0.3s;
+}
+
+.login-box button:hover {
+  opacity: 0.8;
+}
+
+.links {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.links a {
+  color: #444;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.links a:hover {
+  text-decoration: underline;
+  color: #111;
+}

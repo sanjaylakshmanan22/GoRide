@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book Ride</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/book.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
@@ -19,6 +19,7 @@
       <a href="book.html">Book Ride</a>
       <a href="history.html">Ride History</a>
       <a href="profile.html">Profile</a>
+      <a href="#" id="logoutBtn" class="logout-btn">Logout</a>
     </div>
 
     <div class="main">
@@ -28,19 +29,45 @@
       <div class="book-layout">
 
         <div class="ride-form">
-          <input type="text" placeholder="Pickup Location">
-          <input type="text" placeholder="Drop Location">
-          <select>
-            <option>Bike</option>
-            <option>Auto</option>
-            <option>Car</option>
+          <input type="text" id="pickupInput" placeholder="Pickup Location">
+          <input type="text" id="dropInput" placeholder="Drop Location">
+          <select id="vehicleSelect">
+            <option value="Bike">Bike (₹5/km)</option>
+            <option value="Auto">Auto (₹8/km)</option>
+            <option value="Car">Car (₹12/km)</option>
           </select>
-          <div class="fare">Estimated Fare: ₹120</div>
-          <button class="btn">Book Ride</button>
+          <div class="fare-box">
+            <span>Estimated Fare:</span>
+            <span id="estimatedFare" style="color: #FFD400">₹0</span>
+          </div>
+          <p id="walletErr" class="wallet-err"></p>
+          <button class="btn" id="bookBtn" disabled>Book Ride</button>
+
+          <div id="activeRideStatus" class="active-ride-status">
+            <h3>Ride Status</h3>
+            <p id="statusMessage">Searching for driver...</p>
+            
+            <button id="cancelRideBtn" class="btn" style="background-color: #dc3545; margin-top: 10px; display: none;">Cancel Ride</button>
+
+            <!-- Rating UI -->
+            <div id="ratingSection" style="display: none; margin-top: 15px; border-top: 1px solid #ccc; padding-top: 10px;">
+              <h4>Rate your ride</h4>
+              <div id="starContainer" style="font-size: 24px; cursor: pointer; color: #ccc;">
+                <span data-value="1" class="star">☆</span>
+                <span data-value="2" class="star">☆</span>
+                <span data-value="3" class="star">☆</span>
+                <span data-value="4" class="star">☆</span>
+                <span data-value="5" class="star">☆</span>
+              </div>
+              <textarea id="reviewText" placeholder="Leave a review (optional)" style="width: 100%; margin-top: 10px; padding: 5px; font-family: inherit; resize: vertical; min-height: 60px;"></textarea>
+              <button id="submitReviewBtn" class="btn" style="margin-top: 10px;">Submit Review</button>
+              <p id="ratingMessage" style="color: green; display: none; margin-top: 10px; font-weight: 500;"></p>
+            </div>
+          </div>
         </div>
 
         <div class="map">
-          <p>Map Area</p>
+          <p>Map Placeholder</p>
         </div>
 
       </div>
@@ -49,7 +76,7 @@
 
   </div>
 
-  <script src="js/app.js"></script>
+  <script src="js/book.js"></script>
 
 </body>
 </html>

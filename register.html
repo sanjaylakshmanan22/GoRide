@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoRide - Register</title>
+  <link rel="stylesheet" href="css/register.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="login-box">
+    <h2>GoRide</h2>
+    <p>Create a new account</p>
+
+    <label>Name</label>
+    <input type="text" id="nameInput" placeholder="Enter your full name">
+
+    <label>Email</label>
+    <input type="email" id="emailInput" placeholder="Enter your email">
+
+    <label>Phone</label>
+    <input type="tel" id="phoneInput" placeholder="Enter 10-digit phone number" maxlength="10">
+
+    <label>Password</label>
+    <input type="password" id="passwordInput" placeholder="Create a password">
+
+    <label>Register As</label>
+    <select class="role-select" id="roleSelect">
+      <option value="user">User</option>
+      <option value="driver">Driver</option>
+    </select>
+
+    <button id="registerBtn">Register</button>
+
+    <div class="links">
+      <a href="login.html">Already have an account? Login</a>
+    </div>
+  </div>
+
+  <script src="js/register.js"></script>
+</body>
+</html>

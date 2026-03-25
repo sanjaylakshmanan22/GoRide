@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profile</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/profile.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
@@ -19,6 +19,7 @@
       <a href="book.html">Book Ride</a>
       <a href="history.html">Ride History</a>
       <a href="profile.html">Profile</a>
+      <a href="#" id="logoutBtn" class="logout-btn">Logout</a>
     </div>
 
     <div class="main">
@@ -29,76 +30,40 @@
 
         <!-- Profile Card -->
         <div class="profile-card">
-          <h3>Sanjay</h3>
-          <p>Phone: 9876543210</p>
-          <p>Email: sanjay@gmail.com</p>
-          <p>Role: Customer</p>
-          <button class="btn">Edit Profile</button>
+          <h3 style="margin-bottom: 20px; font-size: 22px;">Personal Details</h3>
+          
+          <p><b>Name:</b> <span id="userName"></span></p>
+          <input type="text" id="editName" placeholder="Update your name">
+
+          <p><b>Phone:</b> <span id="userPhone"></span></p>
+          <input type="tel" id="editPhone" placeholder="Update your phone (10 digits)" maxlength="10">
+
+          <p><b>Email:</b> <span id="userEmail"></span></p>
+          <p><b>Role:</b> <span id="userRole"></span></p>
+
+          <button id="editProfileBtn" class="btn">Edit Profile</button>
         </div>
 
         <div class="profile-right">
 
           <!-- Wallet Section -->
-          <div class="section-title">Wallet</div>
+          <div class="section-title">My Wallet</div>
 
           <div class="wallet-card">
             <div class="wallet-balance">
               <div>
                 <p class="wallet-label">Available Balance</p>
-                <p class="wallet-amount">&#8377; 1,250.00</p>
+                <p class="wallet-amount" id="walletAmount">&#8377; 0</p>
               </div>
-              <button class="btn">Add Money</button>
+              <button id="addMoneyBtn" class="btn">Add Money</button>
             </div>
 
             <div class="wallet-transactions">
               <p class="wallet-sub">Recent Transactions</p>
-              <div class="transaction">
-                <span>Ride - Bus Stand to Railway Station</span>
-                <span class="debit">- &#8377;120</span>
-              </div>
-              <div class="transaction">
-                <span>Wallet Recharge</span>
-                <span class="credit">+ &#8377;500</span>
-              </div>
-              <div class="transaction">
-                <span>Ride - College to Super Market</span>
-                <span class="debit">- &#8377;90</span>
+              <div id="transactionsList">
+                <!-- Transactions populates here -->
               </div>
             </div>
-          </div>
-
-          <!-- Offers Section -->
-          <div class="section-title" style="margin-top: 30px;">Offers</div>
-
-          <div class="offers-list">
-
-            <div class="offer-card">
-              <div class="offer-badge">20% OFF</div>
-              <div class="offer-info">
-                <p class="offer-title">First Ride of the Day</p>
-                <p class="offer-desc">Get 20% off on your first ride every day. Use code <b>DAY20</b></p>
-                <p class="offer-expiry">Expires: 31 Dec 2025</p>
-              </div>
-            </div>
-
-            <div class="offer-card">
-              <div class="offer-badge">&#8377;50 OFF</div>
-              <div class="offer-info">
-                <p class="offer-title">Weekend Special</p>
-                <p class="offer-desc">Flat &#8377;50 off on rides above &#8377;200 on weekends. Use code <b>WEEKEND50</b></p>
-                <p class="offer-expiry">Expires: 30 Nov 2025</p>
-              </div>
-            </div>
-
-            <div class="offer-card">
-              <div class="offer-badge">FREE</div>
-              <div class="offer-info">
-                <p class="offer-title">Refer &amp; Earn</p>
-                <p class="offer-desc">Refer a friend and get &#8377;100 added to your wallet after their first ride.</p>
-                <p class="offer-expiry">No Expiry</p>
-              </div>
-            </div>
-
           </div>
 
         </div>
@@ -109,7 +74,7 @@
 
   </div>
 
-  <script src="js/app.js"></script>
+  <script src="js/profile.js"></script>
 
 </body>
 </html>
